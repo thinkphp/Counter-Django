@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Counter App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'counter_app/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- App Header -->
+        <header>
+            <h1 class="app-title">Django App</h1>
+        </header>
+
+        <!-- Counter Value -->
+        <h1 class="
+            {% if counter > 0 %}positive
+            {% elif counter < 0 %}negative
+            {% else %}zero{% endif %}
+        ">
+            {{ counter }}
+        </h1>
+
+        <!-- Buttons -->
+        <div>
+            <form action="{% url 'increase' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit">Increase</button>
+            </form>
+            <form action="{% url 'decrease' %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit">Decrease</button>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with ❤️ using Django</p>
+        </footer>
+    </div>
+</body>
+</html>
+

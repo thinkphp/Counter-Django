@@ -1,0 +1,80 @@
+/* styles.css */
+
+.app-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40; /* Dark gray */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #dedede;
+    padding-bottom: 10px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #ffffff;
+    border: 2px solid #dedede;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+h1.positive {
+    color: #28a745; /* Green for positive numbers */
+}
+
+h1.negative {
+    color: #dc3545; /* Red for negative numbers */
+}
+
+h1.zero {
+    color: #6c757d; /* Gray for zero */
+}
+
+button {
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background: #003f7f;
+    transform: scale(0.95);
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #777777;
+}
+
